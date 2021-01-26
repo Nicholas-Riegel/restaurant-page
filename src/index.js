@@ -13,22 +13,22 @@ const setTabs = (() => {
     //set the li elements under the ul element
 
     for (let i=0; i<3; i++){
-        let li = document.createElement('li');
+        const li = document.createElement('li');
         if (i===0){
             li.setAttribute('id', 'homeTab');
             li.setAttribute('class', 'active');//for default home content to load createHomeContent()
             li.textContent = 'Home';
         }
-        if (i===1){
+        else if (i===1){
             li.setAttribute('id', 'menuTab');
             li.textContent = 'Menu';
         }
-        if (i===2){
+        else if (i===2){
             li.setAttribute('id', 'aboutTab');
             li.textContent = 'About';
         }
         document.querySelector('ul').appendChild(li);
-    }
+    };
 
     //adding eventListener to each tab
 
@@ -42,7 +42,7 @@ const setTabs = (() => {
             
             if (contentDiv.childNodes[0]){
                 contentDiv.removeChild(contentDiv.childNodes[0])
-            }
+            };
 
             x.classList.add('active');
 
@@ -59,6 +59,5 @@ const setTabs = (() => {
     });
     if (document.querySelector('#homeTab').classList.contains('active')){
         createHomeContent();
-    }
+    };
 })();
-

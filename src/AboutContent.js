@@ -1,15 +1,13 @@
 function createAboutContent(){
-    let homeDiv = document.createElement('div');
     
+    const homeDiv = document.createElement('div');
     homeDiv.setAttribute('class', 'active');
     homeDiv.setAttribute('id', 'aboutDiv');
     
-    let h1 = document.createElement('h1');
-    
+    const h1 = document.createElement('h1');
     h1.textContent = "Reservations";
         
-    let p = document.createElement('p');
-    
+    const p = document.createElement('p');
     p.textContent = "(555) 555-5555";
     
     homeDiv.appendChild(h1);

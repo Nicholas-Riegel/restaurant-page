@@ -1,26 +1,30 @@
-ul{
+ul {
     list-style-type: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
-li{
+li {
     padding: 1rem 3rem;
+    color: lightgray;
 }
-li:hover{
+li:hover {
     background-color: lightgrey;
     cursor: pointer;
+    color: white;
 }
-li.active{
+li.active {
     background-color: lightgrey;
+    color: white;
 }
-div.active{
+div.active {
     background-color: lightgray;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 #content {
     display: flex;
@@ -32,12 +36,13 @@ img {
     width: 40rem;
     display: block;
 }
-#homeDiv{
+#homeDiv {
     height: 90vh;
 }
-#menuDiv {
-    
+#menuDiv img{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
-#aboutDiv{
+#aboutDiv {
     height: 90vh;
 }
