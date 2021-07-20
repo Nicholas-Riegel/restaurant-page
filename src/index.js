@@ -2,7 +2,7 @@ import createHomeContent from './HomeContent.js';
 import createMenuContent from './MenuContent.js';
 import createAboutContent from './AboutContent.js';
 
-const setTabs = (() => {
+(() => {
 
     //setting the ul element under body and above #content
 
@@ -36,6 +36,8 @@ const setTabs = (() => {
     tabs.forEach(x=>{
         x.addEventListener('click', ()=>{
             
+            //clear the content div
+
             tabs.forEach(x=>x.classList.remove('active'));
 
             const contentDiv = document.querySelector('#content');
@@ -44,7 +46,11 @@ const setTabs = (() => {
                 contentDiv.removeChild(contentDiv.childNodes[0])
             };
 
+            // add 'active' class to target
+
             x.classList.add('active');
+
+            // set new content
 
             if (document.querySelector('#homeTab').classList.contains('active')){
                 createHomeContent();
@@ -57,6 +63,9 @@ const setTabs = (() => {
             };
         })
     });
+
+    //set default content
+    
     if (document.querySelector('#homeTab').classList.contains('active')){
         createHomeContent();
     };

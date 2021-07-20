@@ -13,9 +13,8 @@ function createHomeContent(){
     const p = document.createElement('p');
     p.textContent = "Congratulations! You've just found the best restaurant in the world.";
     
-    homeDiv.appendChild(h1);
-    homeDiv.appendChild(img);
-    homeDiv.appendChild(p);
+    const elements = [h1, img, p];
+    elements.forEach(x=>homeDiv.appendChild(x));
 
     document.querySelector('#content').appendChild(homeDiv);
 }
